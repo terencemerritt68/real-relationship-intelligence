@@ -4,125 +4,281 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Real Relationship Intelligence</title>
-  <meta name="description" content="A smarter, more thoughtful approach to building meaningful relationships.">
+  <meta name="theme-color" content="#762b40">
+  <meta name="description" content="Discover meaningful relationships through shared values, mutual respect, and genuine understanding. Everyone is welcome.">
+  <title>Real Relationship Intelligence | Love Has No Boundaries</title>
   <style>
+    :root {
+      --cream: #f8f1e7;
+      --burgundy: #762b40;
+      --deep: #54202f;
+      --gold: #b18a4a;
+      --ink: #382b2d;
+      --white: #fffdf9;
+    }
     * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.7;
+    }
+    a { color: inherit; }
+    .topbar {
+      padding: 20px 7%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      background: var(--white);
+      border-bottom: 1px solid #e7d8c2;
+    }
+    .brand {
+      color: var(--burgundy);
+      font-size: 19px;
+      font-weight: bold;
+      line-height: 1.25;
+      letter-spacing: 1px;
+    }
+    .brand small {
+      display: block;
+      color: var(--gold);
       font-family: Arial, sans-serif;
-      background: #f8f5ff;
-      color: #29213d;
-      line-height: 1.6;
+      font-size: 11px;
+      letter-spacing: 3px;
+      margin-top: 5px;
     }
-    header {
-      background: #45236e;
-      color: white;
-      padding: 22px 7%;
-      text-align: center;
+    .navlink {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      text-decoration: none;
+      color: var(--burgundy);
     }
-    header h1 { margin: 0; font-size: 26px; }
     .hero {
+      padding: 55px 7% 65px;
       text-align: center;
-      padding: 65px 20px;
-      background: linear-gradient(135deg, #f8f5ff, #eadcff);
+      background: linear-gradient(140deg, #fffaf2, var(--cream));
     }
-    .hero h2 {
-      font-size: 36px;
-      line-height: 1.2;
-      max-width: 650px;
-      margin: 0 auto 20px;
+    .eyebrow {
+      color: #94713b;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      text-transform: uppercase;
     }
-    .hero p {
-      max-width: 560px;
-      margin: 0 auto 28px;
+    h1 {
+      max-width: 800px;
+      margin: 16px auto;
+      color: var(--deep);
+      font-size: clamp(38px, 7vw, 66px);
+      line-height: 1.12;
+      font-weight: normal;
+    }
+    .intro {
+      max-width: 680px;
+      margin: 0 auto 26px;
       font-size: 18px;
     }
     .button {
       display: inline-block;
-      background: #6336a0;
+      padding: 13px 23px;
+      background: var(--burgundy);
       color: white;
-      padding: 13px 24px;
-      border-radius: 8px;
+      border-radius: 5px;
       text-decoration: none;
+      font-family: Arial, sans-serif;
       font-weight: bold;
     }
-    main {
-      max-width: 900px;
-      margin: auto;
-      padding: 35px 20px;
+    .button:hover { background: var(--deep); }
+    .hero-photo {
+      display: block;
+      width: 100%;
+      max-width: 1000px;
+      height: clamp(230px, 48vw, 470px);
+      object-fit: cover;
+      object-position: center 45%;
+      margin: 40px auto 0;
+      border-radius: 10px;
     }
-    .features {
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 65px 7%;
+    }
+    .section-heading {
+      text-align: center;
+      margin-bottom: 34px;
+    }
+    h2 {
+      color: var(--deep);
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: normal;
+      line-height: 1.2;
+      margin: 8px 0;
+    }
+    .section-heading p {
+      max-width: 650px;
+      margin: 12px auto;
+    }
+    .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 20px;
     }
     .card {
-      background: white;
-      padding: 22px;
-      border-radius: 14px;
-      box-shadow: 0 3px 14px #30204412;
+      padding: 26px;
+      background: var(--white);
+      border: 1px solid #eadcc9;
+      border-radius: 9px;
     }
-    .card h3 { color: #6336a0; }
-    .notice {
-      background: #eee5fa;
-      padding: 20px;
-      border-radius: 12px;
-      margin-top: 25px;
+    .symbol {
+      color: var(--gold);
+      font-size: 30px;
+    }
+    .card h3 {
+      color: var(--burgundy);
+      font-size: 22px;
+      font-weight: normal;
+      margin: 8px 0;
+    }
+    .welcome {
+      padding: 48px 7%;
+      text-align: center;
+      background: #efe2d0;
+    }
+    .welcome p {
+      max-width: 760px;
+      margin: 16px auto;
+      font-size: 18px;
+    }
+    .closing {
+      text-align: center;
+      padding: 55px 7%;
+      background: var(--burgundy);
+      color: white;
+    }
+    .closing h2 { color: white; }
+    .closing p {
+      max-width: 650px;
+      margin: 15px auto 25px;
+    }
+    .closing .button {
+      background: var(--cream);
+      color: var(--burgundy);
     }
     footer {
+      padding: 25px 7%;
       text-align: center;
-      padding: 25px;
-      color: #655a70;
-      font-size: 14px;
+      background: var(--white);
+      color: #716263;
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+    }
+    @media (max-width: 500px) {
+      .topbar { padding: 17px 5%; }
+      .brand { font-size: 15px; }
+      .navlink { font-size: 12px; }
+      .hero { padding: 42px 5%; }
+      main { padding: 45px 5%; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Real Relationship Intelligence</h1>
-    <p>Real connections. Thoughtful choices.</p>
+  <header class="topbar">
+    <div class="brand">
+      REAL RELATIONSHIP
+      <small>INTELLIGENCE</small>
+    </div>
+    <a class="navlink" href="#our-values">Our Values</a>
   </header>
 
   <section class="hero">
-    <h2>Build Relationships With More Understanding</h2>
-    <p>
-      Discover a more thoughtful approach to dating,
-      compatibility, communication, and meaningful connections.
+    <div class="eyebrow">Real connections. Every background.</div>
+    <h1>Love Has No Boundaries.</h1>
+    <p class="intro">
+      Discover meaningful connections through shared values,
+      mutual respect, and genuine understanding. Everyone deserves
+      to feel seen, welcomed, and valued.
     </p>
-    <a class="button" href="#features">Explore Our Vision</a>
+    <a class="button" href="#our-values">Discover What Matters</a>
+    <img
+      class="hero-photo"
+      src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1800&q=85"
+      alt="A couple sharing a warm, affectionate moment"
+      fetchpriority="high"
+    >
   </section>
 
-  <main id="features">
-    <h2>Relationships With Purpose</h2>
-    <div class="features">
-      <section class="card">
-        <h3>Understanding Yourself</h3>
-        <p>Reflect on your values, needs, and what matters most in a relationship.</p>
-      </section>
-      <section class="card">
-        <h3>Compatibility</h3>
-        <p>Explore shared values, expectations, interests, and relationship goals.</p>
-      </section>
-      <section class="card">
-        <h3>Better Communication</h3>
-        <p>Discover practical ways to build trust, listen carefully, and communicate openly.</p>
-      </section>
+  <main id="our-values">
+    <div class="section-heading">
+      <div class="eyebrow">Connection with purpose</div>
+      <h2>Relationships Built on What Matters</h2>
+      <p>
+        A meaningful relationship starts with understanding yourself
+        and learning what helps two people grow together.
+      </p>
     </div>
 
-    <div class="notice">
-      <h3>Our Mission</h3>
-      <p>
-        Real Relationship Intelligence aims to help people make
-        more informed, respectful, and thoughtful relationship decisions.
-      </p>
-      <p><strong>Coming next:</strong> Interactive profiles, compatibility tools, and personalized relationship insights.</p>
+    <div class="cards">
+      <article class="card">
+        <div class="symbol" aria-hidden="true">♡</div>
+        <h3>Know Yourself</h3>
+        <p>
+          Reflect on your values, needs, boundaries, and hopes
+          for a lasting relationship.
+        </p>
+      </article>
+      <article class="card">
+        <div class="symbol" aria-hidden="true">✧</div>
+        <h3>Explore Compatibility</h3>
+        <p>
+          Consider shared goals, interests, values, and the qualities
+          that help a partnership thrive.
+        </p>
+      </article>
+      <article class="card">
+        <div class="symbol" aria-hidden="true">♡</div>
+        <h3>Communicate with Care</h3>
+        <p>
+          Build a foundation of honesty, listening, respect,
+          and thoughtful conversations.
+        </p>
+      </article>
     </div>
   </main>
 
+  <section class="welcome">
+    <div class="eyebrow">Everyone belongs</div>
+    <h2>A Place Where Everyone Is Welcome</h2>
+    <p>
+      Every race, culture, and background has a place here.
+      We believe people connect through kindness, shared values,
+      curiosity, and the willingness to understand one another.
+    </p>
+    <p>
+      Your story matters. Your voice matters. And your hopes for
+      a meaningful relationship deserve respect.
+    </p>
+  </section>
+
+  <section class="closing">
+    <div class="eyebrow" style="color:#e7c990">Your next chapter starts with understanding</div>
+    <h2>Make Room for Meaningful Connection</h2>
+    <p>
+      Real Relationship Intelligence is being developed to help
+      people approach relationships with greater clarity,
+      confidence, and care.
+    </p>
+    <a class="button" href="#our-values">Explore Our Values</a>
+  </section>
+
   <footer>
-    <p>Real Relationship Intelligence</p>
-    <p>A project in development. No personal information is collected on this page.</p>
+    <p><strong>Real Relationship Intelligence</strong></p>
+    <p>Built around respect, inclusion, and genuine human connection.</p>
+    <p>Website in development. Interactive relationship tools are coming soon.</p>
   </footer>
 </body>
 </html>
